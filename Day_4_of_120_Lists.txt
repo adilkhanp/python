@@ -1,0 +1,76 @@
+######### Lists ##############
+from operator import index
+
+students = ["Adilkhan", "khayyum", "Nadeem" , "sumanth" , "sandeep" , "arif"]
+#               0            1          2          3           4         5
+
+print(students[0])
+print(students[3])
+
+students[4] = "sandeep reddy"
+
+print(students)
+
+for i in students :
+    print(i)
+
+####################List methods #############
+print(len(students))  # Count of elements in the list
+
+marks = [100 , 96 , 66 , 89 , 75]
+
+print ( f" Minimum Marks :: {min(marks)}")  # Maximum value
+print ( f" Maximum Marks :: {max(marks)}")  # Minimum Value
+print ( f" Total Marks :: {sum(marks)}")    # Total Value
+
+marks.sort()   # It sorts the list in ascending order
+print(marks)
+
+marks.sort(reverse = True)  # It sorts the list in descending order
+print(marks)
+
+marks.remove(66)  # It is used to remove the values in the list using the value
+print(marks)
+
+marks.pop(2) # It is used to remove the values in the list using the index position
+print(marks)
+
+marks.append(80) # It is used to assign the new value to the list
+print(marks)
+
+students.extend(marks) # It is used to combine two lists into a single list
+print(students)
+
+marks.clear()  # It is used to empty the list
+print(marks)
+
+marks = [100 , 96 , 66 , 89 , 75 , 66]
+# marks1 = marks
+# marks1.append(78)
+# print(marks)
+# print(marks1)
+
+marks1 = marks.copy()  # It is used to make a copy of the list
+marks1.append(78)
+print(marks)
+
+print(marks.count(66))  # It returns the number of occurences of the given element.
+marks.reverse()  # It reverses the list
+print(marks)
+print(marks.index(96)) # It returns the position of the given element
+
+marks.insert( 3, 88 )
+print (marks)
+
+
+# Task : Take the input from the user for his expenses
+#
+#         print i) Total items purchased
+#               ii) Total amount he has spent
+#               iii) What is highest price
+#               iv ) What is the average price
+
+
+
+
+

@@ -1,0 +1,71 @@
+############ Tuples ##############
+from tkinter import Listbox
+
+var1 = (10,20,30)
+
+print(var1[1])
+
+for i in var1:
+    print(i)
+
+###### Boxing and unboxing ###########
+
+tup_var = "Adilkhan","Oracle","Python", "Adilkhan"
+
+print(tup_var)
+print(type(tup_var))
+
+name , course , course1 , course2 = tup_var
+
+print(name)
+print(course)
+print(course1)
+
+print(type(name))
+print(type(course))
+
+print(len(tup_var))
+
+print(min(tup_var))
+
+print(tup_var.count("Adilkhan"))
+
+print(tup_var.index("Oracle"))
+
+print(tup_var[0:2])
+
+print(any(tup_var))
+
+for ind,i in enumerate(tup_var):
+    print(f'{ind} : {i}')
+
+################ sets ##################
+
+set_var = {10,20,30,50,40,80,20,50}
+
+print(set_var)
+
+set_var.pop()
+
+print(set_var)
+
+set_var.remove(40)
+
+print(set_var)
+
+# List  ----- multiple values and ordered and editable
+# Dictionary  ---- multiple values in key value format
+# Tuples ----- multiple values and ordered and non editable
+# Sets  --- multiple values , unique , and unordered
+
+var1 = []
+print(type(var1))
+
+var1_dict = {}
+print(type(var1_dict))
+
+var1_tup = ()
+print(type(var1_tup))
+
+var1_set = set()
+print(type(var1_set))

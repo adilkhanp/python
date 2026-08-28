@@ -1,0 +1,62 @@
+############### STRINGS ###############
+name = "adilkhan paTTan is a tutor"
+     #  0123456789
+
+print(name[0])
+print(name[1:5])
+print(name[1:5:2])
+
+print(name[-1])
+print(name[::-1])
+
+print(name[2:-2])
+
+# for i in "adilkhan" :
+#     print (i)
+
+print(name.upper())
+print(name.lower())
+print(name.title())
+print(name.capitalize())
+print(name.swapcase())
+print(name.casefold())
+
+print(name.find("hello"))
+print(name.index("adil"))
+
+print(name.count("a"))
+
+print(name.startswith("adil"))
+print(name.endswith("tutor"))
+print(name.__contains__("khan"))
+
+print(name.isupper())
+print(name.islower())
+print(name.isalpha())
+
+
+print(name.replace('adilkhan','karthik'))
+
+strings = "     python    "
+print(strings.strip())
+
+strings = "pythpponpp"
+print(strings.strip("p"))
+print(strings.lstrip("p"))
+print(strings.rstrip("p"))
+
+names = name.split()
+print(names)
+
+name = "adilkhan,pattan,oracle,python"
+names = name.split(",")
+
+print(names)
+print("_".join(names))
+
+
+Task : Ask the user for input .
+       1 ) force the user to insert the input in uppercase only. if not show error message
+       2 ) Take the credit number of user as input and store it. while display show as below
+                  1234-xxxx-xxxx-9876
+       3 ) Please validate the credit card number to have only numbers. if not show error message

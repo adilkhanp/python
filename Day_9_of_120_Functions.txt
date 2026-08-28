@@ -1,0 +1,28 @@
+details = "Adilkhan" , "32" , "10-08-1993" , "8686858576" , "buchireddypalem"
+
+name , age , *dob = details
+
+print(name)
+print(age)
+print(dob)
+
+name, *age , mobileno ,address = details
+
+print(name)
+print(age)
+print(address)
+
+*name , mobileno , address = details
+
+
+def calc (num1 , num2 ):
+    return (num1 + num2) , (num1 - num2 ) , (num1 * num2) , (num1 / num2)
+
+
+var1 = calc(10,20)
+print(type(var1))
+print(var1)
+
+sum , sub , mul , div = calc(10,20)
+
+print(sum , sub , mul , div)

@@ -1,0 +1,78 @@
+import datetime as dt
+from datetime import timedelta
+import numpy  as np
+import string
+
+print( dt.datetime.today())
+dd = dt.date.today()
+
+print(dd)
+
+print(dd.year)
+print(dd.month)
+print(dd.day)
+
+print( dd.strftime("%d-%m-%Y"))
+
+#Y  --- 4 digit year
+# %y  --- 2 digit hear
+# %m   ---- month number
+# %B  --- month name
+# %d ---- day
+# %A  -- day name
+# %H  -- hour
+# %M  --- minute
+# %S  --- second
+
+
+dd = dt.date.today()
+
+print ( dd + timedelta(days = 10))
+
+d1 = dt.datetime(2026,10,1)
+d2 = dt.datetime(2026,5,1)
+print( d1 - d2)
+
+
+list1 = [10,20,30,40]
+
+print(len(list1))
+print(max(list1))
+
+
+print(np.max(list1))
+print(np.average(list1))
+
+# where
+# select
+
+gender = ["M","F","F","M","M"]
+
+dt = np.array(gender)
+print( np.where( dt == "M" , "Male","Female"))
+
+stud_marks = [98,60,75,78,58]
+
+stud_array = np.array(stud_marks)
+
+print(stud_array)
+
+conditions = [stud_array >= 75 ,
+              stud_array <= 59 ,
+              stud_array < 75]
+
+choice = [ "Distinction" ,"Fail", "First class" ]
+
+print ( np.select(conditions,choice, default= "Fail"))
+
+print(np.random.randint(1,10))
+otp = np.random.randint(0,9,6)
+
+print(otp.dtype)
+otp_str = ""
+for i in otp :
+    otp_str = otp_str + str(i)
+
+print(otp_str)
+
+print(np.random.rand())

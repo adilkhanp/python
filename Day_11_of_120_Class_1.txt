@@ -1,0 +1,32 @@
+from Day_11_of_120_Class import StudentOperations as so
+
+############# Main program Begins ###########
+
+print("=================STUDENT MANAGEMENT SYSTEM=================\n"
+      "1. Add a student\n"
+      "2. View students\n"
+      "3. Search students\n"
+      "4. Update student\n"
+      "5. Delete student\n"
+      "6. Exit\n")
+
+i = 0
+while i != 6:
+    i = int(input("Enter Your Choice :: "))
+    if i == 1:
+        # Adding the student
+        so.add_student()
+    elif i == 2:
+        # Viewing the student
+        so.view_students()
+    elif i == 3:
+        # Searching the student
+        so.search_students()
+    elif i == 4:
+        # Updating student marks
+        so.update_marks()
+    elif i == 5:
+        # deleting the student
+        so.delete_student()
+
+print("Thank you bye!")

@@ -1,0 +1,43 @@
+##### FILE HANDLING ############
+
+
+w -- write mode .. it clears old content and writes new content
+a -- append mode.. it writes to the existing content
+r -- read mode... it is used to read the data from the file
+
+file = open("SampleFile.txt",'w')
+file = open("SampleFile.txt",'a')
+file.write("This is my fourth line from python")
+file.write("This is my fifth line from python")
+file.write("This is my sixth line from python")
+
+file.close()
+
+file = open("SampleFile.txt",'r')
+dat = file.read()  #### It reads complete file data at once
+print(dat)
+
+dat = file.readlines()
+print(dat)
+
+dat = file.readline()
+print(dat)
+
+for line in file :
+    print(line)
+
+file.close()
+
+file_w = open("Newfile.txt",'w')
+
+with open("SampleFile.txt",'r') as file:
+    for line in file:
+        print(line)
+
+regions = []
+with open('D:/regions.csv') as file :
+    for reg in file:
+        regions.append(reg.strip().split(","))
+
+for i in regions:
+    print(i[1])
