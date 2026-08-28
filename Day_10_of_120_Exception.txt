@@ -1,0 +1,20 @@
+import traceback
+
+try :
+    num1 = int(input("Please enter the number "))
+    num2 = int(input('Please enter second number '))
+
+    result = num1 / num2
+    result = num1 + num2
+    print(result)
+
+except ValueError:
+    print("Some error")
+except TypeError :
+    print("Incomaptible types")
+except Exception as e:
+    print(f"{e} at Line :: {e.__traceback__.tb_lineno}")
+else :
+    print("Program successfully completed")
+finally:
+    print("Done!")

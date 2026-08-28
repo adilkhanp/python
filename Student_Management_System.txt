@@ -1,0 +1,112 @@
+# Declaring the global variables
+students = []
+
+#Function definition to add a student
+def add_student():
+    name = input("Please enter student name ")
+    marks = []
+    for i in range(3):
+        marks.append(int(input(f"Please enter mark{i+1} ")))
+
+    # Preparing dictionary using the user input
+    stud_details = {"name": name,
+                    "marks": marks
+                    }
+    students.append(stud_details)
+    print("Student added successfully")
+
+#Function definition to find the student
+def find_student(stud_name):
+    i = 0
+    for stud in students:
+        name = stud.get("name","Not found")
+        if name.lower() == stud_name.lower():
+            return [stud,i]
+        i += 1
+    return []
+
+
+#Function definition to print the student
+def print_student(stud):
+    print(f"Student {stud[1] + 1}\n------------------------")
+    name = stud[0].get("name", "Not found")
+    marks = stud[0].get("marks", "Not found")
+    total = sum(stud[0].get("marks"))
+    average = total / len(stud[0].get("marks"))
+    print(f"Name : {name}")
+    print(f"Marks : {marks}")
+    print(f"Total : {total}")
+    print(f"Average : {average:.2f}")
+
+#Function definition to view the student
+def view_students():
+    if len(students) == 0 :
+        print("No students found")
+    else :
+        i = 0
+        for stud in students:
+            print_student([stud,i])
+            i += 1
+
+# Function definition for searching student details
+def search_students():
+    stud_name = input("Please enter student name to search ")
+    stud = find_student(stud_name)
+
+    if len(stud) > 0 :
+        print_student(stud)
+    else :
+        print("Student not found")
+
+def update_marks():
+    stud_name = input("Please enter student name to update ")
+    stud = find_student(stud_name)
+    if len(stud) > 0 :
+        print(f"Marks :: {stud[0].get('marks')}")
+        marks = []
+        for k in range(3):
+            marks.append(int(input(f"Please enter mark{k + 1} ")))
+            students[stud[1]]["marks"] = marks
+    else :
+        print ("Student not found")
+
+#Function definition to remove the student
+def delete_student():
+    stud_name = input("Please enter student name to delete ")
+    stud = find_student(stud_name)
+
+    if len(stud) > 0 :
+        students.pop(stud[1])
+    else:
+        print("Student not found")
+
+############# Main program Begins ###########
+
+print("=================STUDENT MANAGEMENT SYSTEM=================\n"
+      "1. Add a student\n"
+      "2. View students\n"
+      "3. Search students\n"
+      "4. Update student\n"
+      "5. Delete student\n"
+      "6. Exit\n")
+
+i = 0
+while i != 6 :
+    i = int(input("Enter Your Choice :: "))
+    if i == 1 :
+        # Adding the student
+        add_student()
+    elif i == 2 :
+        # Viewing the student
+        view_students()
+    elif i == 3 :
+        #Searching the student
+        search_students()
+    elif i == 4 :
+        # Updating student marks
+        update_marks()
+    elif i == 5 :
+        # deleting the student
+        delete_student()
+
+print("Thank you bye!")

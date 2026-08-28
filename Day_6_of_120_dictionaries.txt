@@ -1,0 +1,163 @@
+################ Dictionaries ###############
+
+person_details = { "name" : "adilkhan" ,
+                   "mobile" : "8686858576" ,
+                   "address" : "buchireddypalem"}
+
+print(person_details["name"])
+print(person_details["mobile"])
+# print(person_details["company_name"])
+
+print(person_details.get("name"))
+print(person_details.get("mobile"))
+print(person_details.get("company_name","Company details not provided"))
+
+person_details["name"] = "karthik"
+print(person_details)
+
+person_details["company_name"] = "capgemini"
+print(person_details)
+
+print(person_details.items())
+print(person_details.values())
+
+# for i in person_details:
+#      print(i)
+#
+# for i in person_details.values() :
+#      print(i)
+
+for i in person_details.items() :
+     print(f"{i[0]} : {i[1]}")
+
+del person_details["company_name"]
+print(person_details)
+
+print(person_details.pop("address"))
+print(person_details)
+
+
+print(person_details.popitem())
+print(person_details)
+
+person_details = { "name" : "adilkhan" ,
+                   "mobile" : "8686858576" ,
+                   "address" : "buchireddypalem"}
+
+person_details_new = person_details
+
+print(person_details_new)
+
+person_details_new["company_name"] = "Intense"
+
+print(person_details)
+
+person_details_new = person_details.copy()
+
+print(person_details_new)
+
+person_details_new["company_address"] = "Hyderabad"
+print(person_details_new)
+print(person_details)
+
+person_details_selected = person_details_new.fromkeys(['name' , 'mobile' , 'company_address'])
+print(person_details_selected)
+
+
+
+students = [
+            {
+            "name" : "karthik",
+            "age" : 32,
+            "class" : 6,
+            "address" : {"door no" : "1/2/34",
+                         "street" : "hussain nagar",
+                         "city" : "nellore",
+                         "pincode" : 524003},
+            "marks" : [98,99,100,95,98,100]
+            },
+            {
+             "name" : "sumanth",
+             "age" : 38,
+             "class" : 6,
+             "address" : {"door no" : "1/2/34",
+                         "street" : "jonnawada centre",
+                         "city" : "nellore",
+                         "pincode" : 524003},
+            "marks" : [98,99,93,95,98,85]
+            },
+            {
+            "name" : "sandeep",
+            "age" : 32,
+            "class" : 6,
+            "address" : {"door no" : "1/2/34",
+                         "street" : "hussain nagar",
+                         "city" : "chennai",
+                         "pincode" : 524098},
+            "marks" : [98,62,100,95,98,88]
+            },
+            {
+            "name" : "khayyum",
+            "age" : 32,
+            "class" : 6,
+            "address" : {"door no" : "8/4/34",
+                         "street" : "hussain nagar",
+                         "city" : "nellore",
+                         "pincode" : 524003},
+            "marks" : [98,99,100,95,100,94]
+            },
+            {
+            "name" : "Nadeem",
+            "age" : 32,
+            "class" : 6,
+            "address" : {"door no" : "1/2/34",
+                         "street" : "ismail nagar",
+                         "city" : "nellore",
+                         "pincode" : 524004},
+            "marks" : [98,100,100,95,100,98]
+            },
+            {
+            "name" : "Arif",
+            "age" : 34,
+            "class" : 6,
+            "address" : {"door no" : "1/2/34",
+                         "street" : "khaja nagar",
+                         "city" : "nellore",
+                         "pincode" : 524305},
+            "marks" : [99,99,100,95,86,100]
+            },
+            ]
+
+print(students[0])
+print(students[0]["age"])
+print(students[0].get("age"))
+print(students[0].get("address"))
+print(students[0].get("address").get("street"))
+
+for i in students:
+    print(f"{i.get('name')} is {i.get('age')} years old!. He is from {i.get('address').get('city')}."
+          f"He has scored {sum(i.get('marks'))}")
+
+stud_marks= []
+for i in students:
+    stud_marks.append( {"name" : i.get("name"),
+                        "total_marks" : sum(i.get("marks"))})
+
+print(stud_marks)
+total_marks = []
+for i in stud_marks:
+    total_marks.append(i.get("total_marks"))
+
+print(total_marks)
+
+for i in stud_marks:
+    if i.get("total_marks") == max(total_marks):
+        print(f"{i.get('name')} secured highest marks of {max(total_marks)}")
+		
+		
+Task : Prepare the inventory data.
+
+           1. Ask the user for the product_name , quantity , price of each item and store it in python.
+		   2. Ask the customer details and store it in python.
+		   3. Ask customer to purchase a item and the quantity. Once collected prepare the bill of that customer.
+		   

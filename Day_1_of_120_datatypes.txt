@@ -1,0 +1,47 @@
+##### python 3.11 ##############
+##############Data types############
+string   ------ it stores character data (alpha numeric)
+int      ------ it stores numeric values.
+float    ------ it stores decimal values
+boolean  ------ it stores True or False
+list     ------ it is a collection data type
+tuple    ------ it is a collection data type
+set      ------ it is a collection data type
+dictionary ------- it stores data in the form of key value pair
+                 "name" : "python"
+                 "IDE"  : "pycharm"
+#
+################## variables ################
+course_name = "python"
+course_duration = "120"
+sums = 120.450
+is_joined = True
+
+print(type(course_name))
+print(type(course_duration))
+print(type(sums))
+print(type(is_joined))
+
+course_name = 3000
+print(type(course_name))
+
+course_duration = int(course_duration) + 30
+print(course_duration)
+
+################ input #################
+
+name = input("What is your name? ")
+print(name)  # Adilkhan
+print("name") #name
+print(f"Hi! { name }. How are you?")
+
+# age = int(input ("What is your age?"))
+# print(type(age))
+
+print("Adilkhan",33,"buchireddypalem")
+
+print(type(course_name),type(course_duration),type(sums),type(is_joined))
+
+Task :
+  1. Ask user for his details ( name , age , gender , address) and print it.
+  2. Print data type of each variable.

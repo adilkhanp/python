@@ -1,0 +1,67 @@
+########## operators ##############
+arithmetic operators
+ + , - , * , / , % , // , **
+  Division returns the float value
+comparison operators
+ == , < , <= , > , >= , !=
+logical operators
+and , or
+
+num1 = 10
+num2 = 3
+
+# Arithmetic operators
+print ("Sum is", num1 + num2 )
+print(f"Sum is {num1 + num2}")
+print(f"Difference is {num1 - num2}")
+print(f"Multiplication is {num1 * num2}")
+print(f"Division is {num1 / num2}")
+print(f"Quotient is {num1 // num2}")
+print(f"Reminder is {num1 % num2}")
+print(f"Power is {num1 ** num2}")
+print ( 12 / 4 )
+
+# Comparison operators
+print(f"Is equal? {num1 == num2}")
+print(f"Is Less than? {num1 < num2}")
+print(f"Is Less than or equal? {num1 <= num2}")
+print(f"Is not equal? {num1 != num2}")
+print(f"Is Greater than? {num1 > num2}")
+print(f"Is Greater than or equal? {num1 >= num2}")
+
+# Logical operators
+
+print( num1 == num2 and num1 != num2 )
+print( num1 == num2 or num1 != num2 )
+
+num1 = int(input("Please enter first number "))
+num2 = int(input("Please enter second number "))
+
+result = num1 + num2
+print(f"Summation is :: {result}")
+
+control structures
+These are used to change the normal execution flow of the program
+conditional control structures
+   if
+   elif
+   if..else
+Iterative control structures
+   for loop
+   while loop
+
+########### if ############
+if num1 == num2 :
+    print("Both are equal")
+elif num1 > num2 :
+    print("Num1 is greater than Num2")
+elif num1 < num2 :
+    print("Num1 is Less than Num2")
+else :
+    print("Both are not equal")
+
+print("Execution completed")
+
+Task :
+  1. Ask user for the input of two values and operator and do the specific operation.
+  2. Ask user for the input and display whether the given number is prime or not.

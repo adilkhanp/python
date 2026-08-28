@@ -1,0 +1,108 @@
+from Lesson14 import student
+from MiniProject_1_scorecard import marks
+
+ def function_name(param1,param2) :
+     <<executable code>>
+
+
+ function_name()
+
+ def add(num1,num2):
+     print(num1 + num2)
+
+ def minus(num1,num2):
+     print(num1 - num2)
+
+ def multiply(num1,num2):
+     print(num1 * num2)
+
+
+ user_num1 = int(input("Please enter first number ::"))
+ user_num2 = int(input("Please enter second number ::"))
+ operation = input("Please enter the operation( + , - , *) :: ")
+
+ if operation == "+" :
+     add(user_num1,user_num2)
+ elif operation == "-":
+     minus(user_num1,user_num2)
+ elif operation == "*":
+     multiply(user_num1,user_num2)
+ else :
+     print("Wrong operation selected")
+
+
+ def add(num1,num2):
+     return num1 + num2
+
+ def minus(num1,num2):
+     return num1 - num2
+
+ def multiply(num1,num2):
+     return num1 * num2
+
+ def print_value():
+     print("hello")
+
+
+ user_num1 = int(input("Please enter first number ::"))
+ user_num2 = int(input("Please enter second number ::"))
+ operation = input("Please enter the operation( + , - , *) :: ")
+ result = 0
+
+ if operation == "+" :
+     result = add(user_num1,user_num2)
+ elif operation == "-":
+     result = minus(user_num1,user_num2)
+ elif operation == "*":
+     result = multiply(user_num1,user_num2)
+ else :
+     print("Wrong operation selected")
+
+ print(result)
+ print_value()
+
+order_details = []
+total_amount = 0
+
+def add_order(product_name , quantity , price):
+    order_details.append(
+        {
+            "product_name" :  product_name,
+            "product_count" : quantity,
+            "price"         : price
+        }
+    )
+
+def calculate_total_bill_amount():
+    total_amount = 0
+    for i in order_details:
+        total_amount += i.get("price") * i.get("product_count")
+    return total_amount
+
+def print_bill():
+    for i in order_details:
+        print(f" Product :: {i.get('product_name') }:: {i.get('product_count')} :: ({i.get('price') * i.get('product_count')}))")
+    total_bill_amount = calculate_total_bill_amount()
+    print("Total amount is :: ",total_bill_amount)
+
+while True:
+    product = input("Please enter product name :: ")
+    quantity = int(input( "Please enter the quantity :: "))
+    price = int(input("Please enter the price :: "))
+
+    add_order(product,quantity,price)
+    isNextOrder = input("Do you want to add more items? ( Y/N ) ")
+    if isNextOrder == 'N':
+        break
+
+print_bill()
+
+
+Task : Accept the student details
+                  name , age , gender , marks
+        1. add a student
+        2. view the students ( student name , marks , total marks , average marks)
+        3. search the student
+        4. Modify student marks
+        5. Delete the student
+        6. find the topper
